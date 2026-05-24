@@ -1,0 +1,4 @@
+com\greenary\controller\ReportController.class
+com\greenary\model\Report.class
+com\greenary\repository\ReportRepository.class
+com\greenary\GreenaryApplication.class
