@@ -18,7 +18,6 @@ interface ReportData {
 
 const Dashboard: React.FC = () => {
     const [reports, setReports] = useState<ReportData[]>([]);
-    const [isAdmin, setIsAdmin] = useState(false);
     const [userPoints, setUserPoints] = useState(0);
 
     const loadUser = () => {
@@ -26,7 +25,6 @@ const Dashboard: React.FC = () => {
         if (storedUser) {
             try {
                 const user = JSON.parse(storedUser);
-                setIsAdmin(user.isAdmin === true);
                 setUserPoints(user.points || 0);
             } catch (e) {
                 console.error("Failed to parse user from localStorage", e);

@@ -109,7 +109,7 @@ const products: Product[] = [
 
 const Shop: React.FC = () => {
     const [userPoints, setUserPoints] = useState(0);
-    const [message, setMessage] = useState<{ text: string, type: 'success' | 'error' } | null>(null);
+    const [message] = useState<{ text: string, type: 'success' | 'error' } | null>(null);
     
     // Checkout Modal State
     const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
@@ -217,7 +217,6 @@ const Shop: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {products.map((product, index) => {
                         const canAfford = userPoints >= product.points;
-                        const Icon = product.icon;
                         
                         return (
                             <motion.div 

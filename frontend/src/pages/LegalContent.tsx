@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const TermsContent = (
     <div className="space-y-6">
